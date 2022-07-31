@@ -1,0 +1,53 @@
+body{
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:grey
+ 
+}
+.main-container{
+    height: 340px;
+    width: 250px;
+    position:relative;
+    
+  
+
+}
+/* .front > img{
+    /* width:50%;
+    height:50%; */
+
+.flip-card{ 
+    height:100%;
+    width:100%;
+    border-radius: 10px;
+    position:absolute;
+   backface-visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    transition: 0.7s;
+    perspective: 1000px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2)
+     
+
+}
+.flip-card.front{
+    background-color: aqua;
+    z-index: 2;
+}
+.flip-card.back{
+    transform:rotateY(-180deg);
+    background-color: aquamarine;
+    z-index: 1;
+}
+.main-container:hover .flip-card.front{
+ transform:rotateY(180deg);
+
+
+}
+.main-container:hover .flip-card.back{
+    transform:rotateY(0deg);
+   
+ }
+ 
